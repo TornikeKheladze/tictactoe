@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Square = ({ value, clicked, nextPlayer, winnerId }) => {
   const next = !nextPlayer ? "X" : "O";
@@ -14,11 +14,11 @@ const Square = ({ value, clicked, nextPlayer, winnerId }) => {
 
   const winner =
     winnerId !== null
-      ? { transition: "0,8s", fontSize: "70px", color: "black" }
+      ? { transition: "0,8s", fontSize: "70px", color: "green" }
       : null;
   return (
     <button
-      style={{ backgroundColor: style(value), ...winner }}
+      style={{ color: style(value), ...winner }}
       className="btn"
       onMouseEnter={() => setOpacity(0.2)}
       onMouseLeave={() => setOpacity(0)}

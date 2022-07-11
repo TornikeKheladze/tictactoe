@@ -46,13 +46,6 @@ class App extends Component {
   };
   mapOnSquare = () => {
     const mapped = this.state.history[this.state.active].board.map((x, i) => {
-      // winnerId={
-      //
-      // }
-      // console.log(
-      //   this.checkWinner(this.state.history[this.state.active].board).winnerId,
-      //   i
-      // );
       const winner = (index) => {
         let returnNumber = null;
         if (
@@ -69,7 +62,6 @@ class App extends Component {
         return returnNumber;
       };
 
-      // console.log(winner(i));
       return (
         <Square
           value={x}
@@ -134,7 +126,6 @@ class App extends Component {
     return message;
   };
   render() {
-    console.log(this.state);
     return (
       <div className="App">
         <h1>TIC TAC TOE</h1>
